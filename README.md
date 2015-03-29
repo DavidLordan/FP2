@@ -19,6 +19,8 @@ as simple as taking the user input from a text field and displaying it to the us
 
 For example, a text-box is shown to the user, asking them to enter their name. 
 
+![Alt text](blank.png)
+
 After doing so, they may click to get a welcome message, or to clear the content. Both buttons 
 have a callback procedures to carry out their appropriate actions. 
 
