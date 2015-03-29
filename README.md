@@ -1,17 +1,16 @@
 # Final Project Assignment 2: Explore One More! (FP2) 
 DUE March 30, 2015 Monday (2015-03-30)
 
-
 ### My Library: The Racket Graphical Interface Toolkit
 The library's documentation can be found here: http://docs.racket-lang.org/gui/index.html
 
 For the second exploration I decided to play around with the Racket Graphical Interface Toolkit. 
 I chose this because for the final project I'd like to wrap a graphical interface around the RSound 
-library, and possibly build a synthesizer program. 
+library and possibly build a synthesizer program. 
 
-The first thing I did was the brief walkthrough on creating windows, canvases, and buttons. I then 
-experimented with different user inputs, such as a text boxes and sliders, as well as arranging them 
-in different configurations.  The container hierarchy is very similar to the ‘div’ hierarchy when 
+The first thing I did was the documentation's brief walkthrough on creating windows, canvases, and buttons. 
+I then experimented with different user inputs, such as a text boxes and sliders, as well as arranging them 
+in different configurations.  The container hierarchy is very similar to the ‘div’ and 'span' hierarchy when 
 working with HTML and CSS. By building a tree of horizontal and vertical containers, almost any 
 grid-based arrangement of controls and sub-windows can be pretty easily implemented. 
 
@@ -21,14 +20,15 @@ as simple as taking the user input from a text field and displaying it to the us
 For example, a text-box is shown to the user, asking them to enter their name. 
 
 After doing so, they may click to get a welcome message, or to clear the content. Both buttons 
-have a callback function built in to them to carry out their appropriate actions. 
+have a callback procedures to carry out their appropriate actions. 
 
 Also, a slider is shown. By default, all sliders have a gauge showing their current value just 
 below them. I created a message field to the right, which is set by the slider’s callback. 
 This was done simply to practice extracting a control’s setting and using it to change something 
 elsewhere. In this instance, I set it to display the max value minus the current value. Rather 
 than having the message field simply mimic the gauge built in to the slider, I wanted to show 
-the message field was a separate entity and that callbacks were being fired in the background. 
+the message field was a separate entity being set by the callbacks that were being fired in the 
+background. 
 
 ### Code
 
@@ -100,6 +100,9 @@ the message field was a separate entity and that callbacks were being fired in t
 (send mainWindow show #t)
 
 ```
+###Output
+The output is simply a small window with the message field, text field, buttons, and slider as described above.
+
 
 * output from your code demonstrating what it produced
 * any diagrams or figures explaining your work 
