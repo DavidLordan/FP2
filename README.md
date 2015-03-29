@@ -110,7 +110,8 @@ background.
 ```
 ###Output
 The output is simply a small window with the message field, text field, buttons, and slider as described above.
+
+
 ![Alt text](summary.png)
 
-1. [Create a **pull request**][pull-request] on the original repository to turn in the assignment.
 
