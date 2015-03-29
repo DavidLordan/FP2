@@ -5,14 +5,32 @@ DUE March 30, 2015 Monday (2015-03-30)
 ### My Library: The Racket Graphical Interface Toolkit
 The library's documentation can be found here: http://docs.racket-lang.org/gui/index.html
 
-For the second exploration I decied to play around with the Racket Graphical Interface Toolkit. 
-I chose this because for the final project I'd like to wrap a graphical interface around the RSound library,
-and possibly build a synthezizer program. 
+For the second exploration I decided to play around with the Racket Graphical Interface Toolkit. 
+I chose this because for the final project I'd like to wrap a graphical interface around the RSound 
+library, and possibly build a synthesizer program. 
 
-The first thing I did was the breif walkthrough on creating windows, canvases, and buttons.
-I then experimented with different user inputs, such as a text boxes and sliders.
+The first thing I did was the brief walkthrough on creating windows, canvases, and buttons. I then 
+experimented with different user inputs, such as a text boxes and sliders, as well as arranging them 
+in different configurations.  The container hierarchy is very similar to the ‘div’ hierarchy when 
+working with HTML and CSS. By building a tree of horizontal and vertical containers, almost any 
+grid-based arrangement of controls and sub-windows can be pretty easily implemented. 
 
+I then experimented with the different setters and getters for the controls. This included experiments 
+as simple as taking the user input from a text field and displaying it to the user somewhere else. 
 
+For example, a text-box is shown to the user, asking them to enter their name. 
+
+After doing so, they may click to get a welcome message, or to clear the content. Both buttons 
+have a callback function built in to them to carry out their appropriate actions. 
+
+Also, a slider is shown. By default, all sliders have a gauge showing their current value just 
+below them. I created a message field to the right, which is set by the slider’s callback. 
+This was done simply to practice extracting a control’s setting and using it to change something 
+elsewhere. In this instance, I set it to display the max value minus the current value. Rather 
+than having the message field simply mimic the gauge built in to the slider, I wanted to show 
+the message field was a separate entity and that callbacks were being fired in the background. 
+
+### Code
 
 ```
 #lang racket
@@ -83,33 +101,9 @@ I then experimented with different user inputs, such as a text boxes and sliders
 
 ```
 
-Write what you did!
-Remember that this report must include:
- 
-* a narrative of what you did
-* the code that you wrote
 * output from your code demonstrating what it produced
 * any diagrams or figures explaining your work 
  
-The narrative itself should be no longer than 350 words. Yes, you can add more files and link or refer to them. This is github, handling files is awesome and easy!
 
-Ask questions publicly in the Piazza group.
-
-### How to Do and Submit this assignment
-
-1. To start, [**fork** this repository][forking].
-1. Modify the README.md file and [**commit**][ref-commit] changes to complete your solution.
-  2. (This assignment is just one README.md file, so you can edit it right in github without cloning)
-  3. (You may need to clone and push if you want to add extra files)
 1. [Create a **pull request**][pull-request] on the original repository to turn in the assignment.
-
-<!-- Links -->
-[piazza]: https://piazza.com/class/i55is8xqqwhmr?cid=411
-[schedule]: https://piazza.com/class/i55is8xqqwhmr?cid=453
-[markdown]: https://help.github.com/articles/markdown-basics/
-[forking]: https://guides.github.com/activities/forking/
-[ref-clone]: http://gitref.org/creating/#clone
-[ref-commit]: http://gitref.org/basic/#commit
-[ref-push]: http://gitref.org/remotes/#push
-[pull-request]: https://help.github.com/articles/creating-a-pull-request
 
